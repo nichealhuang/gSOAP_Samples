@@ -1,0 +1,16 @@
+
+.vs
+*.db
+*.*db
+
+obj
+
+bin
+
+.exe
+
+packages
+
+Debug
+ipch
+*.vcxproj.user
