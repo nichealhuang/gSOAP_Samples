@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <schema targetNamespace="urn:dime"
+    xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+    xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:ns="urn:dime"
+    xmlns="http://www.w3.org/2001/XMLSchema"
+    elementFormDefault="unqualified"
+    attributeFormDefault="unqualified">
+    <import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+    <!-- operation request element -->
+    <element name="getImage">
+      <complexType>
+          <sequence>
+            <element name="name" type="xsd:string" minOccurs="0" maxOccurs="1"/><!-- ns__getImage::name -->
+          </sequence>
+      </complexType>
+    </element>
+    <!-- operation response element -->
+    <element name="getImageResponse">
+      <complexType>
+          <sequence>
+            <element name="image" type="xsd:base64Binary" minOccurs="1" maxOccurs="1"/><!-- ns__getImage::image -->
+          </sequence>
+      </complexType>
+    </element>
+    <!-- operation request element -->
+    <element name="putImage">
+      <complexType>
+          <sequence>
+            <element name="name" type="xsd:string" minOccurs="0" maxOccurs="1"/><!-- ns__putImage::name -->
+            <element name="image" type="xsd:base64Binary" minOccurs="0" maxOccurs="1"/><!-- ns__putImage::image -->
+          </sequence>
+      </complexType>
+    </element>
+    <!-- operation response element -->
+    <element name="putImageResponse">
+      <complexType>
+          <sequence>
+            <element name="status" type="xsd:int" minOccurs="1" maxOccurs="1"/><!-- ns__putImage::status -->
+          </sequence>
+      </complexType>
+    </element>
+  </schema>
+

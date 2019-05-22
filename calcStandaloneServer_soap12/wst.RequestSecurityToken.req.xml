@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope
+    xmlns:SOAP-ENV="http://www.w3.org/2003/05/soap-envelope"
+    xmlns:SOAP-ENC="http://www.w3.org/2003/05/soap-encoding"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:ns2="http://schemas.microsoft.com/2003/10/Serialization/"
+    xmlns:tns="http://tempuri.org/"
+    xmlns:c14n="http://www.w3.org/2001/10/xml-exc-c14n#"
+    xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+    xmlns:saml1="urn:oasis:names:tc:SAML:1.0:assertion"
+    xmlns:saml2="urn:oasis:names:tc:SAML:2.0:assertion"
+    xmlns:xenc="http://www.w3.org/2001/04/xmlenc#"
+    xmlns:wsc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"
+    xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"
+    xmlns:chan="http://schemas.microsoft.com/ws/2005/02/duplex"
+    xmlns:wsa5="http://www.w3.org/2005/08/addressing"
+    xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy"
+    xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+    xmlns:wst="http://docs.oasis-open.org/ws-sx/ws-trust/200512">
+ <SOAP-ENV:Header>
+  <wsa5:MessageID></wsa5:MessageID>
+  <wsa5:RelatesTo RelationshipType=""></wsa5:RelatesTo>
+  <wsa5:From>
+   <wsa5:Address></wsa5:Address>
+   <wsa5:ReferenceParameters>
+    <chan:ChannelInstance>0</chan:ChannelInstance>
+    <!-- extensibility element(s) -->
+   </wsa5:ReferenceParameters>
+   <wsa5:Metadata>
+    <!-- extensibility element(s) -->
+   </wsa5:Metadata>
+   <!-- extensibility element(s) -->
+  </wsa5:From>
+  <wsa5:ReplyTo SOAP-ENV:mustUnderstand="1">
+   <wsa5:Address></wsa5:Address>
+   <wsa5:ReferenceParameters>
+    <chan:ChannelInstance>0</chan:ChannelInstance>
+    <!-- extensibility element(s) -->
+   </wsa5:ReferenceParameters>
+   <wsa5:Metadata>
+    <!-- extensibility element(s) -->
+   </wsa5:Metadata>
+   <!-- extensibility element(s) -->
+  </wsa5:ReplyTo>
+  <wsa5:FaultTo SOAP-ENV:mustUnderstand="1">
+   <wsa5:Address></wsa5:Address>
+   <wsa5:ReferenceParameters>
+    <chan:ChannelInstance>0</chan:ChannelInstance>
+    <!-- extensibility element(s) -->
+   </wsa5:ReferenceParameters>
+   <wsa5:Metadata>
+    <!-- extensibility element(s) -->
+   </wsa5:Metadata>
+   <!-- extensibility element(s) -->
+  </wsa5:FaultTo>
+  <wsa5:To SOAP-ENV:mustUnderstand="1"></wsa5:To>
+  <wsa5:Action SOAP-ENV:mustUnderstand="1"></wsa5:Action>
+  <wst:RequestType></wst:RequestType>
+ </SOAP-ENV:Header>
+ <SOAP-ENV:Body>
+   <wst:RequestSecurityToken Context="">
+    <wsp:AppliesTo>
+     <wsa5:EndpointReference>
+      <wsa5:Address></wsa5:Address>
+      <wsa5:ReferenceParameters>
+       <chan:ChannelInstance>0</chan:ChannelInstance>
+       <!-- extensibility element(s) -->
+      </wsa5:ReferenceParameters>
+      <wsa5:Metadata>
+       <!-- extensibility element(s) -->
+      </wsa5:Metadata>
+      <!-- extensibility element(s) -->
+     </wsa5:EndpointReference>
+    </wsp:AppliesTo>
+    <wst:KeyType></wst:KeyType>
+    <wst:RequestType></wst:RequestType>
+    <wst:TokenType></wst:TokenType>
+    <wst:Entropy>
+     <wst:BinarySecret Type=""></wst:BinarySecret>
+    </wst:Entropy>
+    <wst:ComputedKeyAlgorithm></wst:ComputedKeyAlgorithm>
+    <wst:KeySize>0</wst:KeySize>
+    <wst:BinaryExchange ValueType="" EncodingType=""></wst:BinaryExchange>
+    <wst:Authenticator>
+     <wst:CombinedHash></wst:CombinedHash>
+    </wst:Authenticator>
+   </wst:RequestSecurityToken>
+ </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope
+    xmlns:SOAP-ENV="http://www.w3.org/2003/05/soap-envelope"
+    xmlns:SOAP-ENC="http://www.w3.org/2003/05/soap-encoding"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:ns2="http://schemas.microsoft.com/2003/10/Serialization/"
+    xmlns:tns="http://tempuri.org/"
+    xmlns:c14n="http://www.w3.org/2001/10/xml-exc-c14n#"
+    xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+    xmlns:saml1="urn:oasis:names:tc:SAML:1.0:assertion"
+    xmlns:saml2="urn:oasis:names:tc:SAML:2.0:assertion"
+    xmlns:xenc="http://www.w3.org/2001/04/xmlenc#"
+    xmlns:wsc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"
+    xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"
+    xmlns:chan="http://schemas.microsoft.com/ws/2005/02/duplex"
+    xmlns:wsa5="http://www.w3.org/2005/08/addressing"
+    xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy"
+    xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+    xmlns:wst="http://docs.oasis-open.org/ws-sx/ws-trust/200512">
+ <SOAP-ENV:Header>
+ </SOAP-ENV:Header>
+ <SOAP-ENV:Body>
+   <tns:Multiply>
+    <tns:n1>0.0</tns:n1>
+    <tns:n2>0.0</tns:n2>
+   </tns:Multiply>
+ </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

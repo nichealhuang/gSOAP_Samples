@@ -11,6 +11,10 @@ bin
 
 packages
 
+Release
 Debug
 ipch
 *.vcxproj.user
+
+.exe
+.pdb

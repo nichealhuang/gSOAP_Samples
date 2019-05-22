@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="dime"
+  targetNamespace="http://www.aberger,at/SOAP/dime.wsdl"
+  xmlns:tns="http://www.aberger,at/SOAP/dime.wsdl"
+  xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+  xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns:ns="urn:dime"
+  xmlns:SOAP="http://schemas.xmlsoap.org/wsdl/soap/"
+  xmlns:HTTP="http://schemas.xmlsoap.org/wsdl/http/"
+  xmlns:MIME="http://schemas.xmlsoap.org/wsdl/mime/"
+  xmlns:DIME="http://schemas.xmlsoap.org/ws/2002/04/dime/wsdl/"
+  xmlns:WSDL="http://schemas.xmlsoap.org/wsdl/"
+  xmlns="http://schemas.xmlsoap.org/wsdl/">
+
+<types>
+
+  <schema targetNamespace="urn:dime"
+    xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+    xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:ns="urn:dime"
+    xmlns="http://www.w3.org/2001/XMLSchema"
+    elementFormDefault="unqualified"
+    attributeFormDefault="unqualified">
+    <import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+    <!-- operation request element -->
+    <element name="getImage">
+      <complexType>
+          <sequence>
+            <element name="name" type="xsd:string" minOccurs="0" maxOccurs="1"/><!-- ns__getImage::name -->
+          </sequence>
+      </complexType>
+    </element>
+    <!-- operation response element -->
+    <element name="getImageResponse">
+      <complexType>
+          <sequence>
+            <element name="image" type="xsd:base64Binary" minOccurs="1" maxOccurs="1"/><!-- ns__getImage::image -->
+          </sequence>
+      </complexType>
+    </element>
+    <!-- operation request element -->
+    <element name="putImage">
+      <complexType>
+          <sequence>
+            <element name="name" type="xsd:string" minOccurs="0" maxOccurs="1"/><!-- ns__putImage::name -->
+            <element name="image" type="xsd:base64Binary" minOccurs="0" maxOccurs="1"/><!-- ns__putImage::image -->
+          </sequence>
+      </complexType>
+    </element>
+    <!-- operation response element -->
+    <element name="putImageResponse">
+      <complexType>
+          <sequence>
+            <element name="status" type="xsd:int" minOccurs="1" maxOccurs="1"/><!-- ns__putImage::status -->
+          </sequence>
+      </complexType>
+    </element>
+  </schema>
+
+</types>
+
+<message name="getImageRequest">
+  <part name="Body" element="ns:getImage"/><!-- ns__getImage::ns__getImage -->
+</message>
+
+<message name="getImageResponse">
+  <part name="Body" element="ns:getImageResponse"/>
+</message>
+
+<message name="putImageRequest">
+  <part name="Body" element="ns:putImage"/><!-- ns__putImage::ns__putImage -->
+</message>
+
+<message name="putImageResponse">
+  <part name="Body" element="ns:putImageResponse"/>
+</message>
+
+<portType name="dimePortType">
+  <operation name="getImage">
+    <documentation>Service definition of function ns__getImage</documentation>
+    <input message="tns:getImageRequest"/>
+    <output message="tns:getImageResponse"/>
+  </operation>
+  <operation name="putImage">
+    <documentation>Service definition of function ns__putImage</documentation>
+    <input message="tns:putImageRequest"/>
+    <output message="tns:putImageResponse"/>
+  </operation>
+</portType>
+
+<binding name="dime" type="tns:dimePortType">
+  <SOAP:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+  <operation name="getImage">
+    <SOAP:operation soapAction=""/>
+    <input>
+          <SOAP:body use="literal" parts="Body"/>
+    </input>
+    <output>
+          <SOAP:body use="literal" parts="Body"/>
+    </output>
+  </operation>
+  <operation name="putImage">
+    <SOAP:operation soapAction=""/>
+    <input>
+          <SOAP:body use="literal" parts="Body"/>
+    </input>
+    <output>
+          <SOAP:body use="literal" parts="Body"/>
+    </output>
+  </operation>
+</binding>
+
+<service name="dime">
+  <documentation>gSOAP 2.8.83 generated service definition</documentation>
+  <port name="dime" binding="tns:dime">
+    <SOAP:address location="http://localhost/gsoap/mod_gsoap.dll?dime/dime.dll"/>
+  </port>
+</service>
+
+</definitions>
