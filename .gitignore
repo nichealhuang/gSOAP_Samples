@@ -7,7 +7,8 @@ obj
 
 bin
 
-.exe
+*.dll
+*.exe
 
 packages
 
@@ -18,3 +19,16 @@ ipch
 
 .exe
 .pdb
+
+# gSOAP interim files
+*.req.xml
+*.res.xml
+soapH.h
+soapC.c
+soapC.cpp
+soapClient.c
+soapClientLib.c
+soapServerLib.c
+soapStub.h
+soapServer.c
+*.nsmap

@@ -30,6 +30,7 @@ int WSHttpBinding_USCOREICalculatorService::Subtract(_tns__Subtract *tns__Subtra
 {
 	double a = *(tns__Subtract->n1);
 	double b = *(tns__Subtract->n2);
+	tns__SubtractResponse.SubtractResult = new double();
 	*(tns__SubtractResponse.SubtractResult) = a - b;
 	return SOAP_OK;
 } 
@@ -38,6 +39,7 @@ int WSHttpBinding_USCOREICalculatorService::Multiply(_tns__Multiply *tns__Multip
 {
 	double a = *(tns__Multiply->n1);
 	double b = *(tns__Multiply->n2);
+	tns__MultiplyResponse.MultiplyResult = new double();
 	*(tns__MultiplyResponse.MultiplyResult) = a + b;
 	return SOAP_OK;
 } 
@@ -46,8 +48,10 @@ int WSHttpBinding_USCOREICalculatorService::Divide(_tns__Divide *tns__Divide, _t
 {
 	double a = *(tns__Divide->n1);
 	double b = *(tns__Divide->n2);
-	if (b)
+	if (b) {
+		tns__DivideResponse.DivideResult = new double();
 		*(tns__DivideResponse.DivideResult) = a / b;
+	}
 	else
 		return soap_senderfault("Division by zero", NULL);
 	return SOAP_OK;
